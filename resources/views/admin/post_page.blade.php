@@ -31,7 +31,14 @@
     @include('admin.sidebar')
     <!-- Sidebar Navigation end-->
 
+
     <div class="page-content">
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+            {{session()->get('message')}}
+        </div>
+        @endif
         <h1 class="post_title">Add Post</h1>
 
         <div>
